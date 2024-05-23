@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.backdrop-filter {
+  backdrop-filter: blur(20px);
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+.background {
+  background: rgba(23, 23, 23, 0.6);
+}
+.background1 {
+  background: rgba(22, 22, 22, 1);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #2a4ff6, #5ce1e6);
+  color: transparent;
+  background-clip: text;
+}
+.hover:text-highlight:hover {
+  color: #5ce1e6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes burgerOpen {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes burgerClose {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s forwards;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+.animate-burger-open {
+  animation: burgerOpen 0.3s forwards;
+}
+
+.animate-burger-close {
+  animation: burgerClose 0.3s forwards;
+}
+
+.fixed-menu-enter {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fixed-menu-leave {
+  animation: fadeOut 0.5s forwards;
+}
+.features-container {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1)
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.background-transition {
+  background-image: linear-gradient(90deg, #2a2a2a 0%, #121212 100%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 1s;
+  animation: background-transition linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain -80px;
+  animation-range-end: contain 10vh;
+}
+
+@keyframes background-transition {
+  to {
+    background-size: 100% 100%;
+  }
+}
+.text-scroll-reveal {
+  opacity: 0;
+  transition: 0.4s;
+  animation: text-scroll-reveal linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain;
+  animation-range-end: contain 30vh;
+}
+
+@keyframes text-scroll-reveal {
+  to {
+    opacity: 1;
+  }
+}
+.blur {
+  filter: blur(123px);
+}
+
+.scroll-reveal-heading {
+  background-image: linear-gradient(135deg, #2a4ff6, #5ce1e6);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 2s;
+  background-clip: text;
+  animation: scroll-reveal-heading linear forwards;
+  animation-timeline: view(y);
+  animation-range-start: contain 20vh;
+  animation-range-end: cover 50vh;
+}
+@keyframes scroll-reveal-heading {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.svg-animation {
+  animation: svg-animation 2s infinite;
+}
+
+
+@keyframes svg-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-transition {
+  background-image: linear-gradient(90deg, #2a2a2a 0%, #121212 100%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 0.4s;
+  
+}
+
+.start.card-transition{
+  background-size: 100% 100%;
+}
+
+.background-transition2 {
+  background-image: linear-gradient(135deg, #2a4ff6, #5ce1e6);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 2s;
+  background-clip: text;
+  animation: background-transition2 linear forwards;
+}
+
+@keyframes background-transition2 {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+.icon-animation {
+  transform: translateY(-100px);
+  animation: icon-animation 1s forwards;
+}
+
+@keyframes icon-animation {
+  to {
+    transform: translateY(0);
+  }
+}
