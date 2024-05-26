@@ -27,7 +27,7 @@ const Navbar = ({ active }) => {
 
   return (
     <nav
-      className={`backdrop-filter border lato border-[rgb(204_204_204)] border-opacity-10 fixed top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 rounded-full transition-all duration-300 w-[90%] max-w-[756px] ${
+      className={`backdrop-filter border lato border-[rgb(204_204_204)] border-opacity-10 fixed top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 rounded-full transition-all duration-300 w-[90%] z-[1000] max-w-[756px] ${
         scroll
           ? "background1 text-white shadow-md shadow-black"
           : "background text-[#7a7a7a]"

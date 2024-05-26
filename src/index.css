@@ -10,6 +10,56 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.vault {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background: radial-gradient(circle, #2a2a72, #009ffd);
+}
+
+.door {
+  transform-origin: left;
+  transform: rotateY(0deg);
+  transition: transform 1s ease-in-out;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.vault.open .door {
+  transform: rotateY(-120deg);
+}
+
+.bounce {
+  animation: bounce  0.4s 0.8s ease forwards;
+  opacity: 0;
+}
+@keyframes bounce {
+  0%{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50px);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+}
+.rotate{
+animation: rotate 0.00001s linear;
+animation-timeline: view();
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  
+  100%{
+    transform: rotate(360deg);
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -161,7 +211,6 @@ body {
   animation: svg-animation 2s infinite;
 }
 
-
 @keyframes svg-animation {
   0% {
     transform: scale(1);
@@ -179,10 +228,9 @@ body {
   background-size: 0 100%;
   background-repeat: no-repeat;
   transition: 0.4s;
-  
 }
 
-.start.card-transition{
+.start.card-transition {
   background-size: 100% 100%;
 }
 
