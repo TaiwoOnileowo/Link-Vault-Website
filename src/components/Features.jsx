@@ -53,7 +53,7 @@ const Features = ({ setActive }) => {
                 visible ? "icon-animation" : null
               } shadow-lg border-blue border`}
             >
-              {feature.icon}
+              {feature.icon1}
             </div>
             <h3
               className={`text-xs xs:text-base ss:text-lg ts:text-xl md:text-2xl text-center font-bold text-light-text ss:mt-4 md:mt-10`}
@@ -61,7 +61,7 @@ const Features = ({ setActive }) => {
               {feature.title}
             </h3>
             <p className="hidden ts:block text-base md:text-lg text-muted-text text-center mt-2">
-              {feature.description}
+              {feature.description1}
             </p>
           </div>
         ))}
