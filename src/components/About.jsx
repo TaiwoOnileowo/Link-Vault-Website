@@ -29,15 +29,15 @@ const About = () => {
       <div
         className={` background-transition max-w-[600px] md:max-w-[700px]  text-muted-text text-opacity-50 text-center space-y-4 bg-gradient-to-r from-accent-bg to-dark-bg p-4 ss:p-8 rounded-lg shadow-lg`}
       >
-        <p className="text-sm xs:text-base ss:text-lg md:text-2xl text-white text-scroll-reveal">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue to-turquoise font-bold pr-2">
+        <p className="text-sm xs:text-base ss:text-lg md:text-xl text-white text-fade-in opacity-0">
+          <span className="text-white text-[20px] text-transparent font-bold pr-2">
             We know the struggle.
           </span>
           Managing countless links can be overwhelming and inefficient. Chrome's
           bookmarks and history don't work for you. You need a faster and more
           efficient way. Favoriting tabs makes your Chrome cluttered.
         </p>
-        <p className="text-scroll-reveal text-base xs:text-lg ss:text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue to-turquoise font-bold">
+        <p className="text-scroll-reveal md:text-[20px] text-base xs:text-lg  text-fade-in opacity-0 ss:text-xl md:text-2xl text-white bg-gradiet-to-r from-blue to-turquoise font-bold">
           That's where Link Vault comes in
         </p>
       </div>

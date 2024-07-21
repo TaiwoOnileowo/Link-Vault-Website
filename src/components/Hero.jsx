@@ -2,6 +2,8 @@ import React, { useState ,useRef ,useEffect} from "react";
 import { ReactTyped } from "react-typed";
 import icon from "../assets/icon.png";
 import { GiShipWheel } from "react-icons/gi";
+// import CanvasModel from "./Animation";
+
 const HeroSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -48,7 +50,8 @@ const HeroSection = () => {
         </button>
       </div>
       <div className="mt-36">
-  <div
+        {/* <CanvasModel/> */}
+  {/* <div
     className={`vault relative w-[250px] h-[250px] bg-primary-gradient rounded-[50%] flex items-center justify-center ${
       isOpen ? "open" : ""
     }`}
@@ -74,7 +77,8 @@ const HeroSection = () => {
         <img src={icon} alt="" className="bounce w-12 h-12" />
       </div>
     </div>
-  </div>
+  </div> */}
+  {/* <CanvasModel/> */}
 </div>
     </div>
   );
